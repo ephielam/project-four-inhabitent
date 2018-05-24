@@ -1,3 +1,23 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+// The base font size is 16px 
+// The base line-height for the site is 1.75
+@font-face {
+    font-family: Merriweather;
+    src: url(../../fonts/Merriweather/Merriweather-Light.ttf);
+}
+@font-face {
+    font-family: Novecento;
+    src: url(../../fonts/Novecento/Novecentosanswide-Normal.ttf);
+}
+// Colors:
+$base-font: #404040;
+$base-bg: #ffffff;
+$border: #e1e1e1;
+$brand-green: #248A83;
+$brand-purple: #2f1339;
+$brand-orange: #d99054;
+$brand-yellow: #f0e4d1;
+$light-grey: #a1a1a1;
+$med-grey: #808080;

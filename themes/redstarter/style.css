@@ -225,6 +225,14 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: Merriweather;
+  src: url(../../fonts/Merriweather/Merriweather-Light.ttf); }
+
+@font-face {
+  font-family: Novecento;
+  src: url(../../fonts/Novecento/Novecentosanswide-Normal.ttf); }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -493,6 +501,35 @@ a {
   text-align: right;
   width: 50%; }
 
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #e1e1e1; }
+
+.main-navigation {
+  width: 800px;
+  margin: 0 auto; }
+  .main-navigation ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .main-navigation ul .menu-item-home {
+      -webkit-box-flex: 2;
+          -ms-flex: 2;
+              flex: 2; }
+    .main-navigation ul li {
+      margin: 5px; }
+    .main-navigation ul a {
+      text-transform: uppercase;
+      color: #248A83; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -666,3 +703,287 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+p {
+  font-family: Merriweather;
+  font-size: 8pt;
+  margin: 4px 0px 0px 0px; }
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Novecento;
+  font-size: 30pt;
+  font-weight: 400;
+  color: #brand-purple; }
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Novecento;
+  font-size: 20pt;
+  font-weight: 400;
+  color: #2f1339;
+  margin: 30px; }
+
+.home-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../images/home-hero.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../../images/home-hero.jpg");
+  height: 100vh;
+  width: 100vw;
+  border-bottom: 10px solid #fff;
+  background-size: cover; }
+  .home-banner img {
+    width: 200px;
+    height: 200px; }
+
+.shop-section {
+  width: 800px;
+  margin: 0 auto; }
+  .shop-section .shop-categories-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .shop-section .shop-categories-wrapper div {
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #e1e1e1;
+      border-top: 3px solid #e1e1e1;
+      border-color: #e1e1e1; }
+      .shop-section .shop-categories-wrapper div img {
+        height: 70px;
+        margin: 5px; }
+      .shop-section .shop-categories-wrapper div p {
+        margin-bottom: 10px; }
+      .shop-section .shop-categories-wrapper div a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 8pt;
+        color: #fff;
+        background-color: #248A83;
+        padding: 5px 10px; }
+
+.journal-section {
+  width: 800px;
+  margin: 0 auto; }
+  .journal-section .journal-posts-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px; }
+    .journal-section .journal-posts-wrapper .individual-post-wrapper {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      margin: 10px;
+      border: 1px solid #e1e1e1; }
+      .journal-section .journal-posts-wrapper .individual-post-wrapper img {
+        height: 160px;
+        border-bottom: 3px solid #e1e1e1; }
+      .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper {
+        padding: 5px; }
+        .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper p {
+          margin: 4px 0px 0px 0px; }
+        .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper h3 {
+          font-size: 14px;
+          letter-spacing: 2px;
+          margin: 0px 0px 12px 0px; }
+        .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper a {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-family: Novecento;
+          color: #248A83; }
+        .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper button {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-family: Novecento;
+          background: #fff;
+          border-radius: 0px;
+          border-color: #000; }
+          .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper button a {
+            color: #000; }
+
+.shop-page-header {
+  display: block;
+  padding: 20px 0;
+  border-bottom: none; }
+
+.product-type-list {
+  width: 800px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0 30px 0;
+  border-bottom: 1px dashed #e1e1e1; }
+  .product-type-list li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #248A83;
+    padding: 10px; }
+
+.product-grid {
+  width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding-bottom: 60px; }
+  .product-grid .single-product-wrapper {
+    border: 1px solid #e1e1e1; }
+    .product-grid .single-product-wrapper .product-text-wrapper span {
+      text-align: right; }
+
+.journal-container, .find-us-container {
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .journal-container #primary, .find-us-container #primary {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    border-right: 1px solid #e1e1e1;
+    padding: 40px 0;
+    padding-right: 40px; }
+  .journal-container #secondary, .find-us-container #secondary {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    padding: 40px 0;
+    padding-left: 40px;
+    text-align: left; }
+    .journal-container #secondary .widget-title, .find-us-container #secondary .widget-title {
+      text-align: left;
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      font-size: 12pt;
+      font-weight: bold; }
+    .journal-container #secondary p, .find-us-container #secondary p {
+      padding: 5px 0; }
+      .journal-container #secondary p .day-of-week, .find-us-container #secondary p .day-of-week {
+        font-weight: bold; }
+    .journal-container #secondary #archives-2 ul, .find-us-container #secondary #archives-2 ul {
+      list-style: none;
+      margin-left: 0px;
+      padding-left: 0px; }
+      .journal-container #secondary #archives-2 ul a, .find-us-container #secondary #archives-2 ul a {
+        text-decoration: none;
+        color: #248A83;
+        font-family: Merriweather;
+        font-size: 8pt; }
+  .journal-container .blog-posts .single-post-wrapper h2, .find-us-container .blog-posts .single-post-wrapper h2 {
+    background-color: #248A83; }
+    .journal-container .blog-posts .single-post-wrapper h2 a, .find-us-container .blog-posts .single-post-wrapper h2 a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff; }
+  .journal-container .blog-posts .single-post-wrapper h3, .find-us-container .blog-posts .single-post-wrapper h3 {
+    background-color: #248A83;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12pt;
+    font-family: Novecento;
+    font-weight: 400;
+    padding: 0 10px; }
+  .journal-container .blog-posts .single-post-wrapper p, .find-us-container .blog-posts .single-post-wrapper p {
+    padding: 5px 0; }
+  .journal-container .blog-posts .single-post-wrapper .read-more, .find-us-container .blog-posts .single-post-wrapper .read-more {
+    font-family: Novecento;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 20px; }
+
+.about-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../images/about-hero.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../../images/about-hero.jpg");
+  height: 100vh;
+  width: 100vw;
+  border-bottom: 10px solid #fff;
+  background-size: cover;
+  color: #fff;
+  letter-spacing: 2px; }
+
+.about-us {
+  width: 600px;
+  margin: 0 auto;
+  padding-bottom: 50px; }
+  .about-us p {
+    font-size: 9pt; }
+
+.find-us-container #primary h2 {
+  text-align: left;
+  margin: 20px 0; }
+
+.find-us-container #primary .find-us-title {
+  margin-top: 0px; }
+
+.site-footer {
+  background: url("../../images/dark-wood.png");
+  color: #fff;
+  display: block; }
+  .site-footer .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 40px; }
+    .site-footer .footer .site-info, .site-footer .footer .business-hours {
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%; }
+      .site-footer .footer .site-info h4, .site-footer .footer .business-hours h4 {
+        color: #d99054;
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+      .site-footer .footer .site-info span, .site-footer .footer .business-hours span {
+        font-weight: bold; }
+    .site-footer .footer .footer-logo {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+      margin-top: 22px;
+      text-align: right; }
+      .site-footer .footer .footer-logo img {
+        height: 40px; }
+  .site-footer .copyright {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+    font-family: Novecento;
+    font-size: 10pt;
+    text-transform: uppercase;
+    padding-bottom: 15px; }

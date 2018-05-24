@@ -130,3 +130,28 @@ a {
 		width: 50%;
 	}
 }
+
+//custom
+header {
+	display:flex;
+	justify-content: center;
+	border-bottom: 1px solid $border;
+}
+.main-navigation{
+	width: 800px;
+	margin: 0 auto;
+	ul{
+		display: flex;
+		justify-content: space-between;
+		.menu-item-home {
+			flex: 2;
+		}
+		li{
+			margin: 5px;
+		}
+		a{
+			text-transform: uppercase;
+			color: $brand-green;
+		}
+	}
+}

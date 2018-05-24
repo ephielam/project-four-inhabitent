@@ -3,3 +3,330 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+p{
+	font-family: Merriweather;
+	font-size: 8pt;
+	margin: 4px 0px 0px 0px;
+}
+h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: Novecento;
+	font-size: 30pt;
+	font-weight: 400;
+	color: #brand-purple;
+}
+h2{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: Novecento;
+	font-size: 20pt;
+	font-weight: 400;
+	color: $brand-purple;
+	margin: 30px;
+}
+
+.site-content{
+	// display: flex;
+}
+
+.home-banner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url("../../images/home-hero.jpg");
+	height: 100vh;
+	width: 100vw;
+	border-bottom: 10px solid #fff;
+	background-size: cover;
+	img{
+		width: 200px;
+		height: 200px;
+	}
+}
+.shop-section {
+	width: 800px;
+		margin: 0 auto;
+	.shop-categories-wrapper {
+		display: flex;
+		justify-content: space-between;
+		div {
+			text-align: center;
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid $border;
+			border-top: 3px solid $border;
+			border-color: $border;
+			img {
+				height: 70px;
+				margin: 5px;
+			}
+			p{
+				margin-bottom: 10px;
+			}
+			a {
+				text-transform: uppercase;
+				text-decoration: none;
+				font-size: 8pt;
+				color: #fff;
+				background-color: $brand-green;
+				padding: 5px 10px;
+			}
+		}
+	}
+}
+
+.journal-section{
+	width: 800px;
+	margin: 0 auto;
+	.journal-posts-wrapper{
+		display: flex;
+		justify-content: space-between;
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px;
+		.individual-post-wrapper {
+		flex: 1;
+		margin: 10px;
+		border: 1px solid $border;
+			img{
+					height: 160px;
+					border-bottom: 3px solid $border;
+				}
+			.post-text-wrapper{
+				padding: 5px;
+				p{
+					margin: 4px 0px 0px 0px;
+				}
+				h3{
+					font-size: 14px;
+					letter-spacing: 2px;
+					margin: 0px 0px 12px 0px;
+				}
+				a{
+					text-transform: uppercase;
+					text-decoration: none;
+					font-family: Novecento;
+					color: $brand-green;
+				}
+				button {
+					text-transform: uppercase;
+					text-decoration: none;
+					font-family: Novecento;
+					background: #fff;
+					border-radius: 0px;
+					border-color: #000;
+					a{ 
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+}
+
+//shop
+.shop-page-header{
+	display: block;
+	padding: 20px 0;
+	border-bottom: none;
+}
+.product-type-list {
+	width: 800px;
+	margin: 0 auto;
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	padding: 0 0 30px 0;
+	border-bottom: 1px dashed $border;
+	li {
+		a {
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $brand-green;
+			padding: 10px;
+		}
+	}
+
+}
+.product-grid {
+	width: 800px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-gap: 15px;
+	padding-bottom: 60px;
+	.single-product-wrapper{
+		border: 1px solid $border;
+		.product-image-wraper{
+
+		}
+		.product-text-wrapper{
+			span{
+				text-align: right;
+			}
+		}
+		
+	}
+	
+}
+
+//journal
+//both journal and find-us pages have sidebars
+.journal-container, .find-us-container{
+	width: 800px;
+	height: 100%;
+	margin: 0 auto;
+	display:flex;
+	#primary{
+		flex-basis: 70%;
+		border-right: 1px solid $border;
+		padding: 40px 0;
+		padding-right: 40px;
+	}
+	#secondary{
+		flex-basis: 30%;
+		padding: 40px 0;
+		padding-left: 40px;
+		text-align: left;
+		.widget-title {
+			text-align: left;
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-bottom: 20px;
+			font-size: 12pt;
+			font-weight: bold;
+		}
+		p {
+			padding: 5px 0;
+			.day-of-week {
+				font-weight: bold;
+			}
+		}
+		#archives-2 {
+			ul{ 
+				list-style: none;
+				margin-left: 0px;
+				padding-left: 0px;
+				a {
+					text-decoration: none;
+					color: $brand-green;
+					font-family: Merriweather;
+					font-size: 8pt;
+				}
+			}
+		}
+	}
+	.blog-posts {
+		.single-post-wrapper{
+			h2 {
+				background-color: $brand-green;
+				a{
+					text-transform: uppercase;
+					text-decoration: none;
+					color: #fff;
+				}
+				
+			}
+			h3 {
+				background-color: $brand-green;
+				text-transform: uppercase;
+				color: #fff;
+				font-size: 12pt;
+				font-family: Novecento;
+				font-weight: 400;
+				padding: 0 10px;
+			}
+			p{
+				padding: 5px 0;
+			}
+			.read-more{
+				font-family: Novecento;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #000;
+				border: 1px solid #000;
+				padding: 10px 20px;
+			}
+		}
+	}
+}
+//about-us
+.about-banner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url("../../images/about-hero.jpg");
+	height: 100vh;
+	width: 100vw;
+	border-bottom: 10px solid #fff;
+	background-size: cover;
+	color: #fff;
+	letter-spacing: 2px;
+}
+
+.about-us{
+	width: 600px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	p {
+		font-size: 9pt;
+	}
+}
+
+
+
+//find-us
+.find-us-container{
+	#primary{
+			h2{
+			text-align: left;
+			margin: 20px 0;
+		}
+		.find-us-title{
+			margin-top: 0px;
+		}
+	}
+}
+
+//footer
+.site-footer {
+	background: url("../../images/dark-wood.png");
+	color: #fff;
+	display: block;
+	.footer{
+		display: flex;
+		width: 800px;
+		margin: 0 auto;
+		padding-top: 20px;
+		padding-bottom: 40px;
+		.site-info, .business-hours {
+			flex-basis: 25%;
+			h4{
+				color: $brand-orange;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			span {
+				font-weight: bold;
+			}
+		}
+		.footer-logo {
+			flex-basis: 50%;
+			margin-top: 22px;
+			text-align: right;
+			img {
+				height: 40px;
+			}
+		}
+
+	}
+	.copyright {
+		flex-basis: 100%;
+		text-align: center;
+		font-family: Novecento;
+		font-size: 10pt;
+		text-transform: uppercase;
+		padding-bottom: 15px;		
+	}
+}

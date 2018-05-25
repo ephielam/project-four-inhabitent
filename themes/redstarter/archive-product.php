@@ -32,7 +32,7 @@ get_header(); ?>
 				   $args = array( 
 				   		'post_type' => 'product', 
 				   		'order' => 'ASC',
-				   		'posts_per_page' => 16
+				   		'posts_per_page' => 16   
 				   	);
 				   $product_posts = get_posts( $args ); // returns an array of posts
 				?>
@@ -44,7 +44,7 @@ get_header(); ?>
 					   <div class="product-text-wrapper">
 						   <p><?php the_title(); ?> <span><?php echo CFS()->get('price'); ?></span></p>
 						</div>
-					</div>
+					</div><!-- .single-product-wrapper-->
 				<?php endforeach; wp_reset_postdata(); ?>
 					<?php /*the_posts_navigation(); */?>
 

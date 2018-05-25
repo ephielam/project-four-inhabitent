@@ -30,6 +30,8 @@ h2{
 	// display: flex;
 }
 
+
+
 .home-banner{
 	display: flex;
 	justify-content: center;
@@ -126,12 +128,12 @@ h2{
 }
 
 //shop
-.shop-page-header{
+.shop-page-header, .product-type-page-header{
 	display: block;
 	padding: 20px 0;
 	border-bottom: none;
 }
-.product-type-list {
+.product-type-list, .taxonomy-description{
 	width: 800px;
 	margin: 0 auto;
 	display: flex;
@@ -149,7 +151,7 @@ h2{
 	}
 
 }
-.product-grid {
+.product-grid, .product-type-grid{
 	width: 800px;
 	margin: 0 auto;
 	display: grid;
@@ -158,18 +160,72 @@ h2{
 	padding-bottom: 60px;
 	.single-product-wrapper{
 		border: 1px solid $border;
-		.product-image-wraper{
-
+		.product-image-wrapper{
+			img {
+				height: 180px;
+				background-size: cover;
+	
+			}
 		}
 		.product-text-wrapper{
 			span{
 				text-align: right;
 			}
 		}
-		
 	}
-	
 }
+
+//single-product
+
+
+.single-product-container{
+	display: flex;
+	width: 800px;
+	margin: 0 auto;
+	margin-bottom: 110px;
+	justify-content: space-between;
+	.product-image-wrapper{
+		flex-basis: 48%;
+		padding-top: 32px;
+	}
+	.product-text-wrapper{
+		flex-basis: 48%;
+		h2{
+			color: $brand-orange;
+			text-align: left;
+			margin-left: 0px;
+			margin-bottom: 0px;
+		}
+		h3{
+			font-family: Novecento;
+			font-weight: 400;
+			font-size: 16pt;
+			margin: 0px;
+		}
+		p{
+			font-size: 8pt;
+			font-family: Merriweather;
+			line-height: 1.75;
+		}
+		.social-buttons {
+			margin: 10px 0;
+			.smb {
+				font-family: Novecento;
+				font-size: 8pt;
+				text-transform: uppercase;
+				color: #000;
+				background: #fff;
+				box-shadow: none;
+				border: 1px solid #000;
+				border-radius: 0;
+				padding: 8px 16px;	
+			}
+		}
+	}
+}
+
+
+
 
 //journal
 //both journal and find-us pages have sidebars
@@ -287,7 +343,44 @@ h2{
 			margin-top: 0px;
 		}
 	}
+	form {
+		p {
+			margin: 10px 0;
+			label{
+				margin-bottom: 5px;
+				text-transform: uppercase;
+				font-family: Novecento;
+				font-size: 10pt;
+					.required {
+						color: $brand-orange;
+					}
+			}
+			.form-invalid {
+				color: #f00;
+				display: none;
+			}
+		}
+		.submit{
+			background-color: $brand-green;
+			border: none;
+			border-radius: 0;
+			color: #fff;
+			box-shadow: none;
+			font-family: Novecento;
+			text-transform: uppercase;
+			font-size: 10pt;
+			font-weight: 400;
+		}
+		.form-error{
+			font-family: Merriweather;
+			font-size: 8pt;
+			border: 1px solid $brand-yellow;
+			padding: 5px;
+			display: none;
+		}
+	}
 }
+
 
 //footer
 .site-footer {

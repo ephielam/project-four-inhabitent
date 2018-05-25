@@ -133,25 +133,50 @@ a {
 
 //custom
 header {
-	display:flex;
+	// position: absolute;
+	width: 100vw;
+	display: flex;
 	justify-content: center;
 	border-bottom: 1px solid $border;
 }
 .main-navigation{
+	display: flex;
 	width: 800px;
 	margin: 0 auto;
-	ul{
-		display: flex;
-		justify-content: space-between;
-		.menu-item-home {
-			flex: 2;
+	align-items: center;
+	.inhabitent-home{
+		flex: 2;
+		a {
+			img {
+				height: 25px;
+			}
 		}
-		li{
-			margin: 5px;
+	}
+	.menu-menu-1-container{
+		ul{
+			
+			display: flex;
+			justify-content: space-between;
+			li{
+				margin: 5px;
+			}
+			a{
+				text-transform: uppercase;
+				color: $brand-green;
+			}
 		}
-		a{
-			text-transform: uppercase;
-			color: $brand-green;
+	}
+}
+
+.site-header-Home, .site-header-About{
+	position: absolute;
+	border-bottom: none;
+	.main-navigation{
+		.inhabitent-home img {
+			color: #fff;
+		}
+		ul a { 
+			color: #fff;
 		}
 	}
 }

@@ -23,7 +23,7 @@ get_header(); ?>
 					);
 
 					foreach($terms as $term) {
- 					   echo '<div><img src="wp-content/themes/redstarter/images/' . strtolower($term->name) . '.svg" alt="' . $term->name . '"><p>' . $term->description . '</p><a href="../product-type/' . strtolower($term->name) . '" class="shop-category-button">' . $term->name . ' Stuff</a></div>';
+ 					   echo '<div><img src="wp-content/themes/redstarter/images/' . strtolower($term->name) . '.svg" alt="' . $term->name . '"><p>' . $term->description . '</p><a href="product-type/' . strtolower($term->name) . '" class="shop-category-button">' . $term->name . ' Stuff</a></div>';
   					}
 					?>		
 			</div><!-- shop-categories-wrapper -->

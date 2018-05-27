@@ -12,25 +12,25 @@ get_header(); ?>
 					<p>Inhabitent Camping Supply Co. knows what it takes to outfit a camping trip right. From flannel shirts to artisanal axes, we’ve got your covered. Please contact us below with any questions comments or suggestions.</p>
 				<section class="form">
 					<h2>Send Us Email!</h2>
-					<form method="post">
+					<form method="post" class="form-inner">
 						<p class="form-name">
-							<label for="name">Name<span class="required"> *</span></label><br>
-							<input type="text" id="name" name="name" size="40"><br>
+							<label for="name">Name<span class="required"> *</span></label>
+							<input type="text" id="name" name="name" size="40">
 							<span role="alert" class="form-invalid">This field is required.</span>
 						</p>
 						<p class="form-email">
-							<label for="email">Email<span class="required"> *</span></label><br>
-							<input type="text" id="email" name="email" size="40"><br>
+							<label for="email">Email<span class="required"> *</span></label>
+							<input type="email" id="email" name="email" size="40">
 							<span role="alert" class="form-invalid">This field is required.</span>
 						</p>
 						<p class="form-subject">
-							<label for="subject">Subject<span class="required"> *</span></label><br>
-							<input type="text" id="subject" name="subject" size="40"><br>
+							<label for="subject">Subject<span class="required"> *</span></label>
+							<input type="text" id="subject" name="subject" size="40">
 							<span role="alert" class="form-invalid">This field is required.</span>
 						</p>
 						<p class="form-message">
 							<label for="message">Message<span class="required"> *</span><br></label>
-							<textarea id="message" name="message" rows="5" cols="40"></textarea><br>
+							<textarea id="message" name="message" rows="5" cols="40"></textarea>
 							<span role="alert" class="form-invalid">This field is required.</span>
 						</p>
 						<p>

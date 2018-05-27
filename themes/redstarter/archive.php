@@ -19,11 +19,13 @@ get_header(); ?>
 				?>
 				<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
 				   <div class="single-post-wrapper">
-					  <?php the_post_thumbnail(); ?>
-					  <h2><a href="<?php the_permalink(); ?>"><?php	the_title(); ?></a></h2>
-					  <h3 class="subheading"><?php the_date(); ?> / <?php comments_number(); ?> / By <?php the_author(); ?></h3>
-					  <p><?php the_excerpt(); ?></p>
-					  <p><a href="<?php the_permalink(); ?>" class="read-more">Read More <i class="fas fa-arrow-right"></i></a></p>
+				   		<div class="image-wrapper">
+						  <?php the_post_thumbnail(); ?>
+						  <h2><a href="<?php the_permalink(); ?>"><?php	the_title(); ?></a></h2>
+						  <h3 class="subheading"><?php the_date(); ?> / <?php comments_number(); ?> / By <?php the_author(); ?></h3>
+						</div><!-- .image-wrapper-->
+						<p><?php the_excerpt(); ?></p>
+					  	<p><a href="<?php the_permalink(); ?>" class="read-more">Read More <i class="fas fa-arrow-right"></i></a></p>
 					</div><!-- .single-post-wraper-->
 				<?php endforeach; wp_reset_postdata();
 					the_posts_navigation();

@@ -23,7 +23,7 @@ h2{
 	font-size: 20pt;
 	font-weight: 400;
 	color: $brand-purple;
-	margin: 30px;
+	margin: 30px 0;
 }
 
 .site-content{
@@ -193,7 +193,6 @@ h2{
 		h2{
 			color: $brand-orange;
 			text-align: left;
-			margin-left: 0px;
 			margin-bottom: 0px;
 		}
 		h3{
@@ -207,29 +206,29 @@ h2{
 			font-family: Merriweather;
 			line-height: 1.75;
 		}
-		.social-buttons {
-			margin: 10px 0;
-			.smb {
-				font-family: Novecento;
-				font-size: 8pt;
-				text-transform: uppercase;
-				color: #000;
-				background: #fff;
-				box-shadow: none;
-				border: 1px solid #000;
-				border-radius: 0;
-				padding: 8px 16px;	
-			}
-		}
+	}
+}
+
+//social media buttons on single-product and single (post) pages
+.social-buttons {
+	margin: 10px 0;
+	.smb {
+		font-family: Novecento;
+		font-size: 8pt;
+		text-transform: uppercase;
+		color: #000;
+		background: #fff;
+		box-shadow: none;
+		border: 1px solid #000;
+		border-radius: 0;
+		padding: 8px 16px;	
 	}
 }
 
 
-
-
 //journal
-//both journal and find-us pages have sidebars
-.journal-container, .find-us-container{
+//journal, single post, find-us, search, and 404 pages have sidebars
+.journal-container, .find-us-container, .single-post-page-container, .search-container, .error-container{
 	width: 800px;
 	height: 100%;
 	margin: 0 auto;
@@ -275,23 +274,45 @@ h2{
 	}
 	.blog-posts {
 		.single-post-wrapper{
-			h2 {
-				background-color: $brand-green;
-				a{
-					text-transform: uppercase;
-					text-decoration: none;
-					color: #fff;
+			margin-bottom: 50px;
+			.image-wrapper {
+				position: relative;
+				img {
+					
 				}
-				
-			}
-			h3 {
-				background-color: $brand-green;
-				text-transform: uppercase;
-				color: #fff;
-				font-size: 12pt;
-				font-family: Novecento;
-				font-weight: 400;
-				padding: 0 10px;
+				h2 {
+					background-color: $brand-green;
+					color: #fff;
+					position: absolute;
+					top: 10px;
+					padding: 10px 20px;
+					max-width: 75%;
+					line-height: 1.25;
+					text-align: left;
+					a{
+						text-transform: uppercase;
+						text-decoration: none;
+						color: #fff;
+					}
+					
+				}
+				h3 {
+					position: absolute;
+					bottom: -9px;
+					right: 0;
+					background-color: $brand-green;
+					text-transform: uppercase;
+					color: #fff;
+					font-size: 12pt;
+					font-family: Novecento;
+					font-weight: 400;
+					padding: 0 10px;
+					a{
+						text-transform: uppercase;
+						text-decoration: none;
+						color: #fff;
+					}
+				}
 			}
 			p{
 				padding: 5px 0;
@@ -303,6 +324,18 @@ h2{
 				color: #000;
 				border: 1px solid #000;
 				padding: 10px 20px;
+			}
+			.entry-footer{
+				font-family: Novecento;
+				text-transform: uppercase;		
+				padding-top: 10px;
+				span {
+					margin-right: 10px;
+					a {
+						text-decoration: none;
+						color: $brand-green;
+					}
+				}
 			}
 		}
 	}
@@ -343,44 +376,87 @@ h2{
 			margin-top: 0px;
 		}
 	}
-	form {
-		p {
-			margin: 10px 0;
-			label{
-				margin-bottom: 5px;
-				text-transform: uppercase;
-				font-family: Novecento;
-				font-size: 10pt;
-					.required {
-						color: $brand-orange;
-					}
-			}
-			.form-invalid {
-				color: #f00;
-				display: none;
-			}
-		}
-		.submit{
-			background-color: $brand-green;
-			border: none;
-			border-radius: 0;
-			color: #fff;
-			box-shadow: none;
-			font-family: Novecento;
+}
+
+//form on single post and find us pages
+form {
+	p {
+		margin: 10px 0;
+		label {
+			display: inline-block;
+			margin-bottom: 5px;
 			text-transform: uppercase;
+			font-family: Novecento;
 			font-size: 10pt;
-			font-weight: 400;
+			.required {
+				color: $brand-orange;
+			}
 		}
-		.form-error{
+		input, textarea {
+			background-color: #f4f4f4;
 			font-family: Merriweather;
 			font-size: 8pt;
-			border: 1px solid $brand-yellow;
-			padding: 5px;
+			border-radius: 0;
+		}
+		.form-invalid {
+			color: #f00;
 			display: none;
 		}
 	}
+	.submit{
+		background-color: $brand-green;
+		border: none;
+		border-radius: 0;
+		color: #fff;
+		box-shadow: none;
+		font-family: Novecento;
+		text-shadow: none;
+		text-transform: uppercase;
+		font-size: 10pt;
+	}
+	.form-error{
+		font-family: Merriweather;
+		font-size: 8pt;
+		border: 1px solid $brand-yellow;
+		padding: 5px;
+		display: none;
+	}
+}
+.comment-form { 
+	.comment-form-author , .comment-form-email{
+		display: inline-block;
+		width: 49%;
+		input {
+			display: block;
+			width: 100%;
+			border-radius: 0;
+		}
+	}
+	.comment-form-email{
+		margin-left: 5px;
+	}
+	.comment-form-url {
+		input {
+			width: 100%;
+			border-radius: 0;
+		}
+	}
+}
+.form-inner input {
+	display: block;
 }
 
+
+//404
+.error-container {
+	text-align: left;
+	h2{
+		text-align: left;
+	}
+	.page-title {
+		margin: 0;
+	}
+}
 
 //footer
 .site-footer {

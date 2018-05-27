@@ -740,7 +740,7 @@ h2 {
   font-size: 20pt;
   font-weight: 400;
   color: #2f1339;
-  margin: 30px; }
+  margin: 30px 0; }
 
 .home-banner {
   display: -webkit-box;
@@ -895,7 +895,6 @@ h2 {
     .single-product-container .product-text-wrapper h2 {
       color: #d99054;
       text-align: left;
-      margin-left: 0px;
       margin-bottom: 0px; }
     .single-product-container .product-text-wrapper h3 {
       font-family: Novecento;
@@ -906,82 +905,110 @@ h2 {
       font-size: 8pt;
       font-family: Merriweather;
       line-height: 1.75; }
-    .single-product-container .product-text-wrapper .social-buttons {
-      margin: 10px 0; }
-      .single-product-container .product-text-wrapper .social-buttons .smb {
-        font-family: Novecento;
-        font-size: 8pt;
-        text-transform: uppercase;
-        color: #000;
-        background: #fff;
-        -webkit-box-shadow: none;
-                box-shadow: none;
-        border: 1px solid #000;
-        border-radius: 0;
-        padding: 8px 16px; }
 
-.journal-container, .find-us-container {
+.social-buttons {
+  margin: 10px 0; }
+  .social-buttons .smb {
+    font-family: Novecento;
+    font-size: 8pt;
+    text-transform: uppercase;
+    color: #000;
+    background: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: 1px solid #000;
+    border-radius: 0;
+    padding: 8px 16px; }
+
+.journal-container, .find-us-container, .single-post-page-container, .search-container, .error-container {
   width: 800px;
   height: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .journal-container #primary, .find-us-container #primary {
+  .journal-container #primary, .find-us-container #primary, .single-post-page-container #primary, .search-container #primary, .error-container #primary {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
     border-right: 1px solid #e1e1e1;
     padding: 40px 0;
     padding-right: 40px; }
-  .journal-container #secondary, .find-us-container #secondary {
+  .journal-container #secondary, .find-us-container #secondary, .single-post-page-container #secondary, .search-container #secondary, .error-container #secondary {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
     padding: 40px 0;
     padding-left: 40px;
     text-align: left; }
-    .journal-container #secondary .widget-title, .find-us-container #secondary .widget-title {
+    .journal-container #secondary .widget-title, .find-us-container #secondary .widget-title, .single-post-page-container #secondary .widget-title, .search-container #secondary .widget-title, .error-container #secondary .widget-title {
       text-align: left;
       margin-left: 0px;
       margin-top: 0px;
       margin-bottom: 20px;
       font-size: 12pt;
       font-weight: bold; }
-    .journal-container #secondary p, .find-us-container #secondary p {
+    .journal-container #secondary p, .find-us-container #secondary p, .single-post-page-container #secondary p, .search-container #secondary p, .error-container #secondary p {
       padding: 5px 0; }
-      .journal-container #secondary p .day-of-week, .find-us-container #secondary p .day-of-week {
+      .journal-container #secondary p .day-of-week, .find-us-container #secondary p .day-of-week, .single-post-page-container #secondary p .day-of-week, .search-container #secondary p .day-of-week, .error-container #secondary p .day-of-week {
         font-weight: bold; }
-    .journal-container #secondary #archives-2 ul, .find-us-container #secondary #archives-2 ul {
+    .journal-container #secondary #archives-2 ul, .find-us-container #secondary #archives-2 ul, .single-post-page-container #secondary #archives-2 ul, .search-container #secondary #archives-2 ul, .error-container #secondary #archives-2 ul {
       list-style: none;
       margin-left: 0px;
       padding-left: 0px; }
-      .journal-container #secondary #archives-2 ul a, .find-us-container #secondary #archives-2 ul a {
+      .journal-container #secondary #archives-2 ul a, .find-us-container #secondary #archives-2 ul a, .single-post-page-container #secondary #archives-2 ul a, .search-container #secondary #archives-2 ul a, .error-container #secondary #archives-2 ul a {
         text-decoration: none;
         color: #248A83;
         font-family: Merriweather;
         font-size: 8pt; }
-  .journal-container .blog-posts .single-post-wrapper h2, .find-us-container .blog-posts .single-post-wrapper h2 {
-    background-color: #248A83; }
-    .journal-container .blog-posts .single-post-wrapper h2 a, .find-us-container .blog-posts .single-post-wrapper h2 a {
+  .journal-container .blog-posts .single-post-wrapper, .find-us-container .blog-posts .single-post-wrapper, .single-post-page-container .blog-posts .single-post-wrapper, .search-container .blog-posts .single-post-wrapper, .error-container .blog-posts .single-post-wrapper {
+    margin-bottom: 50px; }
+    .journal-container .blog-posts .single-post-wrapper .image-wrapper, .find-us-container .blog-posts .single-post-wrapper .image-wrapper, .single-post-page-container .blog-posts .single-post-wrapper .image-wrapper, .search-container .blog-posts .single-post-wrapper .image-wrapper, .error-container .blog-posts .single-post-wrapper .image-wrapper {
+      position: relative; }
+      .journal-container .blog-posts .single-post-wrapper .image-wrapper h2, .find-us-container .blog-posts .single-post-wrapper .image-wrapper h2, .single-post-page-container .blog-posts .single-post-wrapper .image-wrapper h2, .search-container .blog-posts .single-post-wrapper .image-wrapper h2, .error-container .blog-posts .single-post-wrapper .image-wrapper h2 {
+        background-color: #248A83;
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        padding: 10px 20px;
+        max-width: 75%;
+        line-height: 1.25;
+        text-align: left; }
+        .journal-container .blog-posts .single-post-wrapper .image-wrapper h2 a, .find-us-container .blog-posts .single-post-wrapper .image-wrapper h2 a, .single-post-page-container .blog-posts .single-post-wrapper .image-wrapper h2 a, .search-container .blog-posts .single-post-wrapper .image-wrapper h2 a, .error-container .blog-posts .single-post-wrapper .image-wrapper h2 a {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #fff; }
+      .journal-container .blog-posts .single-post-wrapper .image-wrapper h3, .find-us-container .blog-posts .single-post-wrapper .image-wrapper h3, .single-post-page-container .blog-posts .single-post-wrapper .image-wrapper h3, .search-container .blog-posts .single-post-wrapper .image-wrapper h3, .error-container .blog-posts .single-post-wrapper .image-wrapper h3 {
+        position: absolute;
+        bottom: -9px;
+        right: 0;
+        background-color: #248A83;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 12pt;
+        font-family: Novecento;
+        font-weight: 400;
+        padding: 0 10px; }
+        .journal-container .blog-posts .single-post-wrapper .image-wrapper h3 a, .find-us-container .blog-posts .single-post-wrapper .image-wrapper h3 a, .single-post-page-container .blog-posts .single-post-wrapper .image-wrapper h3 a, .search-container .blog-posts .single-post-wrapper .image-wrapper h3 a, .error-container .blog-posts .single-post-wrapper .image-wrapper h3 a {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #fff; }
+    .journal-container .blog-posts .single-post-wrapper p, .find-us-container .blog-posts .single-post-wrapper p, .single-post-page-container .blog-posts .single-post-wrapper p, .search-container .blog-posts .single-post-wrapper p, .error-container .blog-posts .single-post-wrapper p {
+      padding: 5px 0; }
+    .journal-container .blog-posts .single-post-wrapper .read-more, .find-us-container .blog-posts .single-post-wrapper .read-more, .single-post-page-container .blog-posts .single-post-wrapper .read-more, .search-container .blog-posts .single-post-wrapper .read-more, .error-container .blog-posts .single-post-wrapper .read-more {
+      font-family: Novecento;
       text-transform: uppercase;
       text-decoration: none;
-      color: #fff; }
-  .journal-container .blog-posts .single-post-wrapper h3, .find-us-container .blog-posts .single-post-wrapper h3 {
-    background-color: #248A83;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 12pt;
-    font-family: Novecento;
-    font-weight: 400;
-    padding: 0 10px; }
-  .journal-container .blog-posts .single-post-wrapper p, .find-us-container .blog-posts .single-post-wrapper p {
-    padding: 5px 0; }
-  .journal-container .blog-posts .single-post-wrapper .read-more, .find-us-container .blog-posts .single-post-wrapper .read-more {
-    font-family: Novecento;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000;
-    border: 1px solid #000;
-    padding: 10px 20px; }
+      color: #000;
+      border: 1px solid #000;
+      padding: 10px 20px; }
+    .journal-container .blog-posts .single-post-wrapper .entry-footer, .find-us-container .blog-posts .single-post-wrapper .entry-footer, .single-post-page-container .blog-posts .single-post-wrapper .entry-footer, .search-container .blog-posts .single-post-wrapper .entry-footer, .error-container .blog-posts .single-post-wrapper .entry-footer {
+      font-family: Novecento;
+      text-transform: uppercase;
+      padding-top: 10px; }
+      .journal-container .blog-posts .single-post-wrapper .entry-footer span, .find-us-container .blog-posts .single-post-wrapper .entry-footer span, .single-post-page-container .blog-posts .single-post-wrapper .entry-footer span, .search-container .blog-posts .single-post-wrapper .entry-footer span, .error-container .blog-posts .single-post-wrapper .entry-footer span {
+        margin-right: 10px; }
+        .journal-container .blog-posts .single-post-wrapper .entry-footer span a, .find-us-container .blog-posts .single-post-wrapper .entry-footer span a, .single-post-page-container .blog-posts .single-post-wrapper .entry-footer span a, .search-container .blog-posts .single-post-wrapper .entry-footer span a, .error-container .blog-posts .single-post-wrapper .entry-footer span a {
+          text-decoration: none;
+          color: #248A83; }
 
 .about-banner {
   display: -webkit-box;
@@ -1016,20 +1043,26 @@ h2 {
 .find-us-container #primary .find-us-title {
   margin-top: 0px; }
 
-.find-us-container form p {
+form p {
   margin: 10px 0; }
-  .find-us-container form p label {
+  form p label {
+    display: inline-block;
     margin-bottom: 5px;
     text-transform: uppercase;
     font-family: Novecento;
     font-size: 10pt; }
-    .find-us-container form p label .required {
+    form p label .required {
       color: #d99054; }
-  .find-us-container form p .form-invalid {
+  form p input, form p textarea {
+    background-color: #f4f4f4;
+    font-family: Merriweather;
+    font-size: 8pt;
+    border-radius: 0; }
+  form p .form-invalid {
     color: #f00;
     display: none; }
 
-.find-us-container form .submit {
+form .submit {
   background-color: #248A83;
   border: none;
   border-radius: 0;
@@ -1037,16 +1070,41 @@ h2 {
   -webkit-box-shadow: none;
           box-shadow: none;
   font-family: Novecento;
+  text-shadow: none;
   text-transform: uppercase;
-  font-size: 10pt;
-  font-weight: 400; }
+  font-size: 10pt; }
 
-.find-us-container form .form-error {
+form .form-error {
   font-family: Merriweather;
   font-size: 8pt;
   border: 1px solid #f0e4d1;
   padding: 5px;
   display: none; }
+
+.comment-form .comment-form-author, .comment-form .comment-form-email {
+  display: inline-block;
+  width: 49%; }
+  .comment-form .comment-form-author input, .comment-form .comment-form-email input {
+    display: block;
+    width: 100%;
+    border-radius: 0; }
+
+.comment-form .comment-form-email {
+  margin-left: 5px; }
+
+.comment-form .comment-form-url input {
+  width: 100%;
+  border-radius: 0; }
+
+.form-inner input {
+  display: block; }
+
+.error-container {
+  text-align: left; }
+  .error-container h2 {
+    text-align: left; }
+  .error-container .page-title {
+    margin: 0; }
 
 .site-footer {
   background: url("../../images/dark-wood.png");

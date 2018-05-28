@@ -42,7 +42,7 @@ get_header(); ?>
 					   		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 					   </div>
 					   <div class="product-text-wrapper">
-						   <p><?php the_title(); ?> <span><?php echo CFS()->get('price'); ?></span></p>
+						   <p><span class="product-title"><?php the_title(); ?></span><span class="price"><?php echo CFS()->get('price'); ?></span></p>
 						</div>
 					</div><!-- .single-product-wrapper-->
 				<?php endforeach; wp_reset_postdata(); ?>

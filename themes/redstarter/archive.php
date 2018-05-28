@@ -25,7 +25,7 @@ get_header(); ?>
 						  <h3 class="subheading"><?php the_date(); ?> / <?php comments_number(); ?> / By <?php the_author(); ?></h3>
 						</div><!-- .image-wrapper-->
 						<p><?php the_excerpt(); ?></p>
-					  	<p><a href="<?php the_permalink(); ?>" class="read-more">Read More <i class="fas fa-arrow-right"></i></a></p>
+					  	<p class="read-more-button"><a href="<?php the_permalink(); ?>" class="read-more">Read More <i class="fas fa-arrow-right"></i></a></p>
 					</div><!-- .single-post-wraper-->
 				<?php endforeach; wp_reset_postdata();
 					the_posts_navigation();

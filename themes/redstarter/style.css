@@ -527,6 +527,7 @@ header {
     .main-navigation .inhabitent-home a img {
       height: 25px; }
   .main-navigation .menu-menu-1-container ul {
+    font-size: 10pt;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -538,6 +539,20 @@ header {
     .main-navigation .menu-menu-1-container ul a {
       text-transform: uppercase;
       color: #248A83; }
+    .main-navigation .menu-menu-1-container ul a:hover {
+      color: #2f1339; }
+  .main-navigation .search-form fieldset {
+    border: none; }
+    .main-navigation .search-form fieldset label {
+      display: none; }
+    .main-navigation .search-form fieldset button {
+      border: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      background: none;
+      padding: 0;
+      color: #248A83;
+      text-shadow: none; }
 
 .site-header-Home, .site-header-About {
   position: absolute;
@@ -546,6 +561,9 @@ header {
     color: #fff; }
   .site-header-Home .main-navigation ul a, .site-header-About .main-navigation ul a {
     color: #fff; }
+  .site-header-Home .main-navigation .search-form button, .site-header-About .main-navigation .search-form button {
+    color: #fff;
+    text-shadow: none; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -791,6 +809,10 @@ h2 {
         color: #fff;
         background-color: #248A83;
         padding: 5px 10px; }
+    .shop-section .shop-categories-wrapper div:hover {
+      border-color: #d99054; }
+    .shop-section .shop-categories-wrapper a:hover {
+      background-color: #19625D; }
 
 .journal-section {
   width: 800px;
@@ -804,7 +826,8 @@ h2 {
             justify-content: space-between;
     list-style-type: none;
     padding: 0px;
-    margin: 0px; }
+    margin: 0px;
+    margin-bottom: 40px; }
     .journal-section .journal-posts-wrapper .individual-post-wrapper {
       -webkit-box-flex: 1;
           -ms-flex: 1;
@@ -827,15 +850,24 @@ h2 {
           text-decoration: none;
           font-family: Novecento;
           color: #248A83; }
+        .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper a:hover {
+          color: #000; }
         .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper button {
           text-transform: uppercase;
           text-decoration: none;
           font-family: Novecento;
           background: #fff;
           border-radius: 0px;
-          border-color: #000; }
+          border-color: #000;
+          -webkit-box-shadow: none;
+                  box-shadow: none; }
           .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper button a {
             color: #000; }
+        .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper button:hover {
+          background: #248A83;
+          border: none; }
+          .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper button:hover a {
+            color: #fff; }
 
 .shop-page-header, .product-type-page-header {
   display: block;
@@ -859,6 +891,8 @@ h2 {
     text-decoration: none;
     color: #248A83;
     padding: 10px; }
+  .product-type-list li a:hover, .taxonomy-description li a:hover {
+    color: #2f1339; }
 
 .product-grid, .product-type-grid {
   width: 800px;
@@ -871,9 +905,23 @@ h2 {
     border: 1px solid #e1e1e1; }
     .product-grid .single-product-wrapper .product-image-wrapper img, .product-type-grid .single-product-wrapper .product-image-wrapper img {
       height: 180px;
+      width: 100%;
       background-size: cover; }
-    .product-grid .single-product-wrapper .product-text-wrapper span, .product-type-grid .single-product-wrapper .product-text-wrapper span {
-      text-align: right; }
+    .product-grid .single-product-wrapper .product-text-wrapper, .product-type-grid .single-product-wrapper .product-text-wrapper {
+      overflow-x: hidden;
+      padding: 0 10px 10px 10px;
+      position: relative; }
+      .product-grid .single-product-wrapper .product-text-wrapper .product-title:before, .product-type-grid .single-product-wrapper .product-text-wrapper .product-title:before {
+        float: left;
+        width: 0;
+        white-space: nowrap;
+        content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . "; }
+      .product-grid .single-product-wrapper .product-text-wrapper span, .product-type-grid .single-product-wrapper .product-text-wrapper span {
+        background-color: #fff; }
+      .product-grid .single-product-wrapper .product-text-wrapper .price, .product-type-grid .single-product-wrapper .product-text-wrapper .price {
+        position: absolute;
+        right: 0;
+        padding-right: 10px; }
 
 .single-product-container {
   display: -webkit-box;
@@ -918,7 +966,12 @@ h2 {
             box-shadow: none;
     border: 1px solid #000;
     border-radius: 0;
-    padding: 8px 16px; }
+    padding: 8px 16px;
+    text-shadow: none; }
+  .social-buttons .smb:hover {
+    background: #248A83;
+    color: #fff;
+    border: none; }
 
 .journal-container, .find-us-container, .single-post-page-container, .search-container, .error-container {
   width: 800px;
@@ -946,6 +999,11 @@ h2 {
       margin-bottom: 20px;
       font-size: 12pt;
       font-weight: bold; }
+    .journal-container #secondary a, .find-us-container #secondary a, .single-post-page-container #secondary a, .search-container #secondary a, .error-container #secondary a {
+      color: #248A83;
+      text-decoration: none; }
+    .journal-container #secondary a:hover, .find-us-container #secondary a:hover, .single-post-page-container #secondary a:hover, .search-container #secondary a:hover, .error-container #secondary a:hover {
+      color: #2f1339; }
     .journal-container #secondary p, .find-us-container #secondary p, .single-post-page-container #secondary p, .search-container #secondary p, .error-container #secondary p {
       padding: 5px 0; }
       .journal-container #secondary p .day-of-week, .find-us-container #secondary p .day-of-week, .single-post-page-container #secondary p .day-of-week, .search-container #secondary p .day-of-week, .error-container #secondary p .day-of-week {
@@ -959,6 +1017,8 @@ h2 {
         color: #248A83;
         font-family: Merriweather;
         font-size: 8pt; }
+      .journal-container #secondary #archives-2 ul a:hover, .find-us-container #secondary #archives-2 ul a:hover, .single-post-page-container #secondary #archives-2 ul a:hover, .search-container #secondary #archives-2 ul a:hover, .error-container #secondary #archives-2 ul a:hover {
+        color: #2f1339; }
   .journal-container .blog-posts .single-post-wrapper, .find-us-container .blog-posts .single-post-wrapper, .single-post-page-container .blog-posts .single-post-wrapper, .search-container .blog-posts .single-post-wrapper, .error-container .blog-posts .single-post-wrapper {
     margin-bottom: 50px; }
     .journal-container .blog-posts .single-post-wrapper .image-wrapper, .find-us-container .blog-posts .single-post-wrapper .image-wrapper, .single-post-page-container .blog-posts .single-post-wrapper .image-wrapper, .search-container .blog-posts .single-post-wrapper .image-wrapper, .error-container .blog-posts .single-post-wrapper .image-wrapper {
@@ -976,6 +1036,8 @@ h2 {
           text-transform: uppercase;
           text-decoration: none;
           color: #fff; }
+        .journal-container .blog-posts .single-post-wrapper .image-wrapper h2 a:hover, .find-us-container .blog-posts .single-post-wrapper .image-wrapper h2 a:hover, .single-post-page-container .blog-posts .single-post-wrapper .image-wrapper h2 a:hover, .search-container .blog-posts .single-post-wrapper .image-wrapper h2 a:hover, .error-container .blog-posts .single-post-wrapper .image-wrapper h2 a:hover {
+          color: #f0e4d1; }
       .journal-container .blog-posts .single-post-wrapper .image-wrapper h3, .find-us-container .blog-posts .single-post-wrapper .image-wrapper h3, .single-post-page-container .blog-posts .single-post-wrapper .image-wrapper h3, .search-container .blog-posts .single-post-wrapper .image-wrapper h3, .error-container .blog-posts .single-post-wrapper .image-wrapper h3 {
         position: absolute;
         bottom: -9px;
@@ -993,13 +1055,6 @@ h2 {
           color: #fff; }
     .journal-container .blog-posts .single-post-wrapper p, .find-us-container .blog-posts .single-post-wrapper p, .single-post-page-container .blog-posts .single-post-wrapper p, .search-container .blog-posts .single-post-wrapper p, .error-container .blog-posts .single-post-wrapper p {
       padding: 5px 0; }
-    .journal-container .blog-posts .single-post-wrapper .read-more, .find-us-container .blog-posts .single-post-wrapper .read-more, .single-post-page-container .blog-posts .single-post-wrapper .read-more, .search-container .blog-posts .single-post-wrapper .read-more, .error-container .blog-posts .single-post-wrapper .read-more {
-      font-family: Novecento;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #000;
-      border: 1px solid #000;
-      padding: 10px 20px; }
     .journal-container .blog-posts .single-post-wrapper .entry-footer, .find-us-container .blog-posts .single-post-wrapper .entry-footer, .single-post-page-container .blog-posts .single-post-wrapper .entry-footer, .search-container .blog-posts .single-post-wrapper .entry-footer, .error-container .blog-posts .single-post-wrapper .entry-footer {
       font-family: Novecento;
       text-transform: uppercase;
@@ -1009,6 +1064,21 @@ h2 {
         .journal-container .blog-posts .single-post-wrapper .entry-footer span a, .find-us-container .blog-posts .single-post-wrapper .entry-footer span a, .single-post-page-container .blog-posts .single-post-wrapper .entry-footer span a, .search-container .blog-posts .single-post-wrapper .entry-footer span a, .error-container .blog-posts .single-post-wrapper .entry-footer span a {
           text-decoration: none;
           color: #248A83; }
+        .journal-container .blog-posts .single-post-wrapper .entry-footer span a:hover, .find-us-container .blog-posts .single-post-wrapper .entry-footer span a:hover, .single-post-page-container .blog-posts .single-post-wrapper .entry-footer span a:hover, .search-container .blog-posts .single-post-wrapper .entry-footer span a:hover, .error-container .blog-posts .single-post-wrapper .entry-footer span a:hover {
+          color: #2f1339; }
+
+.read-more, .read-more:visited {
+  font-family: Novecento;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 20px; }
+
+.read-more:hover {
+  color: #fff;
+  background-color: #248A83;
+  border: none; }
 
 .about-banner {
   display: -webkit-box;
@@ -1039,6 +1109,8 @@ h2 {
 .find-us-container #primary h2 {
   text-align: left;
   margin: 20px 0; }
+  .find-us-container #primary h2 .map {
+    height: 100px; }
 
 .find-us-container #primary .find-us-title {
   margin-top: 0px; }
@@ -1074,6 +1146,11 @@ form .submit {
   text-transform: uppercase;
   font-size: 10pt; }
 
+form .submit:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #19625D; }
+
 form .form-error {
   font-family: Merriweather;
   font-size: 8pt;
@@ -1099,12 +1176,73 @@ form .form-error {
 .form-inner input {
   display: block; }
 
-.error-container {
+.error-container, .search-container {
   text-align: left; }
-  .error-container h2 {
-    text-align: left; }
-  .error-container .page-title {
+  .error-container h1, .search-container h1 {
+    text-align: left;
+    margin: 30px 0 20px 0;
+    font-size: 20pt;
+    font-weight: 700; }
+  .error-container p, .search-container p {
+    margin-bottom: 10px; }
+  .error-container fieldset, .search-container fieldset {
+    border: none;
+    margin: 0 0 20px 0;
+    padding: 0; }
+    .error-container fieldset label input, .search-container fieldset label input {
+      border-radius: 0;
+      font-family: Merriweather;
+      font-size: 8pt;
+      background-color: #f4f4f4; }
+    .error-container fieldset button, .search-container fieldset button {
+      display: none; }
+  .error-container h2, .search-container h2 {
+    text-align: left;
+    font-size: 12pt;
+    font-weight: 700;
+    margin: 10px 0; }
+  .error-container a, .search-container a {
+    color: #248A83;
+    text-decoration: none;
+    font-size: 8pt; }
+  .error-container ul, .search-container ul {
+    font-family: Merriweather;
+    font-size: 8pt;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0; }
+    .error-container ul a, .search-container ul a {
+      text-decoration: none;
+      color: #248A83; }
+  .error-container .page-title, .search-container .page-title {
     margin: 0; }
+  .error-container #archives-dropdown--1, .search-container #archives-dropdown--1 {
+    font-family: Merriweather;
+    font-size: 8pt; }
+
+.search-container h1 {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 20px; }
+
+.search-container h2 a {
+  font-size: 16pt; }
+
+.search-container article {
+  margin: 20px 0 40px 0; }
+  .search-container article .entry-meta {
+    font-family: Novecento;
+    text-transform: uppercase;
+    font-size: 6pt; }
+
+.search-container .read-more-button {
+  margin: 20px 0; }
+
+.search-container .read-more {
+  font-size: 8pt;
+  color: #000; }
+
+.search-container .read-more:hover {
+  color: #fff; }
 
 .site-footer {
   background: url("../../images/dark-wood.png");
@@ -1125,6 +1263,11 @@ form .form-error {
         color: #d99054;
         text-transform: uppercase;
         letter-spacing: 2px; }
+      .site-footer .footer .site-info a, .site-footer .footer .business-hours a {
+        color: #fff;
+        text-decoration: none; }
+      .site-footer .footer .site-info a:hover, .site-footer .footer .business-hours a:hover {
+        text-decoration: underline; }
       .site-footer .footer .site-info span, .site-footer .footer .business-hours span {
         font-weight: bold; }
     .site-footer .footer .footer-logo {

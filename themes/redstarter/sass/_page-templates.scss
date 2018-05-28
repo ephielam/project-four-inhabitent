@@ -75,6 +75,12 @@ h2{
 				padding: 5px 10px;
 			}
 		}
+		div:hover {
+			border-color: $brand-orange;
+		}
+		a:hover {
+			background-color: #19625D;
+		}
 	}
 }
 
@@ -87,6 +93,7 @@ h2{
 		list-style-type: none;
 		padding: 0px;
 		margin: 0px;
+		margin-bottom: 40px;
 		.individual-post-wrapper {
 		flex: 1;
 		margin: 10px;
@@ -111,6 +118,9 @@ h2{
 					font-family: Novecento;
 					color: $brand-green;
 				}
+				a:hover {
+					color: #000;
+				}
 				button {
 					text-transform: uppercase;
 					text-decoration: none;
@@ -118,8 +128,16 @@ h2{
 					background: #fff;
 					border-radius: 0px;
 					border-color: #000;
+					box-shadow: none;
 					a{ 
 						color: #000;
+					}
+				}
+				button:hover {
+					background: $brand-green;
+					border: none;
+					a {
+						color: #fff;
 					}
 				}
 			}
@@ -148,6 +166,9 @@ h2{
 			color: $brand-green;
 			padding: 10px;
 		}
+		a:hover {
+			color: $brand-purple;
+		}
 	}
 
 }
@@ -163,17 +184,35 @@ h2{
 		.product-image-wrapper{
 			img {
 				height: 180px;
+				width: 100%;
 				background-size: cover;
-	
 			}
 		}
 		.product-text-wrapper{
-			span{
-				text-align: right;
+			overflow-x: hidden;
+			.product-title:before {	
+		    float: left;
+		    width: 0;
+		    white-space: nowrap;	
+		    content:
+		 ". . . . . . . . . . . . . . . . . . . . "
+		 ". . . . . . . . . . . . . . . . . . . . "
+
+			}
+			padding: 0 10px 10px 10px;
+			position: relative;
+			span {
+				background-color: #fff;
+			}
+			.price{
+				position: absolute;
+				right: 0;
+				padding-right: 10px;
 			}
 		}
 	}
 }
+
 
 //single-product
 
@@ -222,6 +261,12 @@ h2{
 		border: 1px solid #000;
 		border-radius: 0;
 		padding: 8px 16px;	
+		text-shadow: none;
+	}
+	.smb:hover {
+		background: $brand-green;
+		color: #fff;
+		border: none;
 	}
 }
 
@@ -252,6 +297,13 @@ h2{
 			font-size: 12pt;
 			font-weight: bold;
 		}
+		a {
+			color: $brand-green;
+			text-decoration: none;
+		}
+		a:hover {
+			color: $brand-purple;
+		}
 		p {
 			padding: 5px 0;
 			.day-of-week {
@@ -268,6 +320,9 @@ h2{
 					color: $brand-green;
 					font-family: Merriweather;
 					font-size: 8pt;
+				}
+				a:hover {
+					color: $brand-purple;
 				}
 			}
 		}
@@ -294,7 +349,9 @@ h2{
 						text-decoration: none;
 						color: #fff;
 					}
-					
+					a:hover {
+					color: $brand-yellow;
+					}
 				}
 				h3 {
 					position: absolute;
@@ -317,14 +374,6 @@ h2{
 			p{
 				padding: 5px 0;
 			}
-			.read-more{
-				font-family: Novecento;
-				text-transform: uppercase;
-				text-decoration: none;
-				color: #000;
-				border: 1px solid #000;
-				padding: 10px 20px;
-			}
 			.entry-footer{
 				font-family: Novecento;
 				text-transform: uppercase;		
@@ -335,11 +384,29 @@ h2{
 						text-decoration: none;
 						color: $brand-green;
 					}
+					a:hover {
+						color: $brand-purple;
+					}
 				}
 			}
 		}
 	}
 }
+//read more button also on search results page
+.read-more, .read-more:visited {
+	font-family: Novecento;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+	border: 1px solid #000;
+	padding: 10px 20px;
+}
+.read-more:hover {
+	color: #fff;
+	background-color: $brand-green;
+	border: none;
+}
+
 //about-us
 .about-banner{
 	display: flex;
@@ -371,6 +438,9 @@ h2{
 			h2{
 			text-align: left;
 			margin: 20px 0;
+			.map {
+				height: 100px;
+			}
 		}
 		.find-us-title{
 			margin-top: 0px;
@@ -414,6 +484,10 @@ form {
 		text-transform: uppercase;
 		font-size: 10pt;
 	}
+	.submit:hover {
+		box-shadow: none;
+		background-color: #19625D;
+	}
 	.form-error{
 		font-family: Merriweather;
 		font-size: 8pt;
@@ -448,13 +522,89 @@ form {
 
 
 //404
-.error-container {
+.error-container, .search-container {
 	text-align: left;
+	h1{
+		text-align: left;
+		margin: 30px 0 20px 0;
+		font-size: 20pt;
+		font-weight: 700;
+	}
+	p {
+		margin-bottom: 10px;
+	}
+	fieldset {
+		border: none;
+		margin: 0 0 20px 0;
+		padding: 0;
+		label input {
+			border-radius: 0;
+			font-family: Merriweather;
+			font-size: 8pt;
+			background-color: #f4f4f4;
+		}
+		button {
+			display: none;
+		}
+		
+	}
 	h2{
 		text-align: left;
+		font-size: 12pt;
+		font-weight: 700;
+		margin: 10px 0;
+	}
+	a {
+		color: $brand-green;
+		text-decoration: none;
+		font-size: 8pt;
+	}
+	ul {
+		font-family: Merriweather;
+		font-size: 8pt;
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+		a {
+			text-decoration: none;
+			color: $brand-green;
+		}
 	}
 	.page-title {
 		margin: 0;
+	}
+	#archives-dropdown--1 {
+		font-family: Merriweather;
+		font-size: 8pt;
+	}
+}
+
+//search
+.search-container {
+	h1 {
+		border-bottom: 1px solid $border;
+		padding-bottom: 20px;
+	}
+	h2 a {
+		font-size: 16pt;
+	}
+	article {
+		margin: 20px 0 40px 0;
+		.entry-meta {
+			font-family: Novecento;
+			text-transform: uppercase;
+			font-size: 6pt;
+		}
+	}
+	.read-more-button{
+		margin: 20px 0;
+	}
+	.read-more {
+		font-size: 8pt;
+		color: #000;
+	}
+	.read-more:hover {
+		color: #fff;
 	}
 }
 
@@ -475,6 +625,13 @@ form {
 				color: $brand-orange;
 				text-transform: uppercase;
 				letter-spacing: 2px;
+			}
+			a {
+				color: #fff;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
 			}
 			span {
 				font-weight: bold;

@@ -13,7 +13,7 @@ get_header(); ?>
 			<main id="main" class="site-main" role="main">
 
 				<section class="error-404 not-found">
-					<h2 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h2>
+					<h1 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h1>
 				
 					<div class="page-content">
 						<p><?php echo esc_html( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?' ); ?></p>

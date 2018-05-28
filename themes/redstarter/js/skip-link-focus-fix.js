@@ -39,3 +39,11 @@
     );
   }
 })();
+
+
+// document.getElementByClassName('search-submit');
+// $('.search-submit' ).click(function() {
+//   alert( "Test" );
+// });
+
+

@@ -154,7 +154,7 @@ header {
 	}
 	.menu-menu-1-container{
 		ul{
-			
+			font-size: 10pt;
 			display: flex;
 			justify-content: space-between;
 			li{
@@ -163,6 +163,25 @@ header {
 			a{
 				text-transform: uppercase;
 				color: $brand-green;
+			}
+			a:hover {
+				color: $brand-purple;
+			}
+		}
+	}
+	.search-form{
+		fieldset {
+			border: none;
+			label {
+				display: none;
+			}
+			button {
+				border: none;
+				box-shadow: none;
+				background: none;
+				padding: 0;
+				color: $brand-green;
+				text-shadow: none;
 			}
 		}
 	}
@@ -177,6 +196,12 @@ header {
 		}
 		ul a { 
 			color: #fff;
+		}
+		.search-form{
+			button{
+				color: #fff;
+				text-shadow: none;
+			}
 		}
 	}
 }

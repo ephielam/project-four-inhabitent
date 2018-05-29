@@ -42,7 +42,7 @@
 
 
 // document.getElementByClassName('search-submit');
-// $('.search-submit' ).click(function() {
+// $('.fa-search' ).click(function() {
 //   alert( "Test" );
 // });
 

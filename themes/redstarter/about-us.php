@@ -3,7 +3,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id ="main" class="site-main" role="main">
-		<section class="about-banner">
+		<section class="about-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
 			<h1><?php the_title(); ?></h1>
 		</section><!-- about-banner-->
 		<section class="about-us">

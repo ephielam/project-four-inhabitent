@@ -172,16 +172,29 @@ header {
 	.search-form{
 		fieldset {
 			border: none;
+			display: inline-block;
+			padding: 5px;
+			a.search-toggle {
+				float: left;
+			 	i {
+					color: $brand-green;
+					font-size: 8pt;
+				}			
+			}
 			label {
 				display: none;
-			}
-			button {
+				input {
 				border: none;
+				outline: none;
 				box-shadow: none;
-				background: none;
+				background: transparent;
 				padding: 0;
 				color: $brand-green;
 				text-shadow: none;
+				text-transform: uppercase;
+				font-family: Novecento;
+				font-size: 8pt;
+				}
 			}
 		}
 	}
@@ -197,11 +210,22 @@ header {
 		ul a { 
 			color: #fff;
 		}
-		.search-form{
-			button{
+		ul li {
+			a:hover {
+			color: $brand-yellow;
+			}
+		}
+		fieldset {
+			a.search-toggle i {
 				color: #fff;
-				text-shadow: none;
+			}
+			.search-field {
+				color: #fff;
+			}
+			::placeholder {
+			    color: #fff;
 			}
 		}
 	}
 }
+

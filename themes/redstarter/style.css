@@ -542,17 +542,28 @@ header {
     .main-navigation .menu-menu-1-container ul a:hover {
       color: #2f1339; }
   .main-navigation .search-form fieldset {
-    border: none; }
+    border: none;
+    display: inline-block;
+    padding: 5px; }
+    .main-navigation .search-form fieldset a.search-toggle {
+      float: left; }
+      .main-navigation .search-form fieldset a.search-toggle i {
+        color: #248A83;
+        font-size: 8pt; }
     .main-navigation .search-form fieldset label {
       display: none; }
-    .main-navigation .search-form fieldset button {
-      border: none;
-      -webkit-box-shadow: none;
-              box-shadow: none;
-      background: none;
-      padding: 0;
-      color: #248A83;
-      text-shadow: none; }
+      .main-navigation .search-form fieldset label input {
+        border: none;
+        outline: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        background: transparent;
+        padding: 0;
+        color: #248A83;
+        text-shadow: none;
+        text-transform: uppercase;
+        font-family: Novecento;
+        font-size: 8pt; }
 
 .site-header-Home, .site-header-About {
   position: absolute;
@@ -561,9 +572,20 @@ header {
     color: #fff; }
   .site-header-Home .main-navigation ul a, .site-header-About .main-navigation ul a {
     color: #fff; }
-  .site-header-Home .main-navigation .search-form button, .site-header-About .main-navigation .search-form button {
-    color: #fff;
-    text-shadow: none; }
+  .site-header-Home .main-navigation ul li a:hover, .site-header-About .main-navigation ul li a:hover {
+    color: #f0e4d1; }
+  .site-header-Home .main-navigation fieldset a.search-toggle i, .site-header-About .main-navigation fieldset a.search-toggle i {
+    color: #fff; }
+  .site-header-Home .main-navigation fieldset .search-field, .site-header-About .main-navigation fieldset .search-field {
+    color: #fff; }
+  .site-header-Home .main-navigation fieldset ::-webkit-input-placeholder, .site-header-About .main-navigation fieldset ::-webkit-input-placeholder {
+    color: #fff; }
+  .site-header-Home .main-navigation fieldset :-ms-input-placeholder, .site-header-About .main-navigation fieldset :-ms-input-placeholder {
+    color: #fff; }
+  .site-header-Home .main-navigation fieldset ::-ms-input-placeholder, .site-header-About .main-navigation fieldset ::-ms-input-placeholder {
+    color: #fff; }
+  .site-header-Home .main-navigation fieldset ::placeholder, .site-header-About .main-navigation fieldset ::placeholder {
+    color: #fff; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -741,7 +763,8 @@ object {
 p {
   font-family: Merriweather;
   font-size: 8pt;
-  margin: 4px 0px 0px 0px; }
+  margin: 4px 0px 0px 0px;
+  color: #404040; }
 
 h1 {
   text-align: center;
@@ -749,7 +772,7 @@ h1 {
   font-family: Novecento;
   font-size: 30pt;
   font-weight: 400;
-  color: #brand-purple; }
+  color: #2f1339; }
 
 h2 {
   text-align: center;
@@ -851,7 +874,7 @@ h2 {
           font-family: Novecento;
           color: #248A83; }
         .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper a:hover {
-          color: #000; }
+          color: #2f1339; }
         .journal-section .journal-posts-wrapper .individual-post-wrapper .post-text-wrapper button {
           text-transform: uppercase;
           text-decoration: none;
@@ -885,7 +908,7 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 0 30px 0;
-  border-bottom: 1px dashed #e1e1e1; }
+  border-bottom: 1px dashed #c8c8c8; }
   .product-type-list li a, .taxonomy-description li a {
     text-transform: uppercase;
     text-decoration: none;
@@ -903,13 +926,14 @@ h2 {
   padding-bottom: 60px; }
   .product-grid .single-product-wrapper, .product-type-grid .single-product-wrapper {
     border: 1px solid #e1e1e1; }
-    .product-grid .single-product-wrapper .product-image-wrapper img, .product-type-grid .single-product-wrapper .product-image-wrapper img {
+    .product-grid .single-product-wrapper .product-image-wrapper, .product-type-grid .single-product-wrapper .product-image-wrapper {
       height: 180px;
-      width: 100%;
-      background-size: cover; }
+      background-size: cover !important;
+      background-position: center center !important;
+      border-bottom: 3px solid #e1e1e1; }
     .product-grid .single-product-wrapper .product-text-wrapper, .product-type-grid .single-product-wrapper .product-text-wrapper {
       overflow-x: hidden;
-      padding: 0 10px 10px 10px;
+      padding: 5px 10px 10px 10px;
       position: relative; }
       .product-grid .single-product-wrapper .product-text-wrapper .product-title:before, .product-type-grid .single-product-wrapper .product-text-wrapper .product-title:before {
         float: left;
@@ -1080,6 +1104,50 @@ h2 {
   background-color: #248A83;
   border: none; }
 
+.comments-area {
+  font-family: Merriweather;
+  font-size: 8pt; }
+  .comments-area .comments-title {
+    text-align: left; }
+  .comments-area .comment-body, .comments-area .children .comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0; }
+  .comments-area .comment-list {
+    border-bottom: 1px solid #e1e1e1; }
+  .comments-area ol, .comments-area ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0; }
+  .comments-area .children {
+    margin-left: 40px;
+    border-top: 1px solid #e1e1e1; }
+  .comments-area .comment-author-avatar img {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    margin-right: 20px; }
+  .comments-area cite.fn {
+    font-style: normal;
+    font-weight: bold; }
+  .comments-area p {
+    color: #000;
+    margin: 10px 0; }
+  .comments-area .comment-metadata a, .comments-area a.comment-reply-link {
+    text-decoration: none;
+    color: #248A83; }
+  .comments-area .comment-metadata a:hover, .comments-area a.comment-reply-link:hover {
+    color: #2f1339; }
+  .comments-area .comment-reply-title {
+    font-family: Novecento;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .comments-area .logged-in-as a {
+    text-decoration: none;
+    color: #248A83; }
+
 .about-banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1090,14 +1158,15 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../images/about-hero.jpg");
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../../images/about-hero.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
   height: 100vh;
   width: 100vw;
   border-bottom: 10px solid #fff;
   background-size: cover;
-  color: #fff;
   letter-spacing: 2px; }
+  .about-banner h1 {
+    color: #fff; }
 
 .about-us {
   width: 600px;
@@ -1106,9 +1175,17 @@ h2 {
   .about-us p {
     font-size: 9pt; }
 
+.find-us-container #primary h1 {
+  text-align: left;
+  margin: 0;
+  font-size: 20pt;
+  font-weight: bold; }
+
 .find-us-container #primary h2 {
   text-align: left;
-  margin: 20px 0; }
+  margin: 20px 0;
+  font-size: 16pt;
+  font-weight: bold; }
   .find-us-container #primary h2 .map {
     height: 100px; }
 
@@ -1125,14 +1202,18 @@ form p {
     font-size: 10pt; }
     form p label .required {
       color: #d99054; }
-  form p input, form p textarea {
+  form p input[type="text"], form p input[type="email"], form p input[type="url"], form p textarea {
     background-color: #f4f4f4;
     font-family: Merriweather;
     font-size: 8pt;
-    border-radius: 0; }
-  form p .form-invalid {
-    color: #f00;
-    display: none; }
+    border-radius: 0;
+    margin-top: 5px; }
+  form p textarea {
+    width: 519px; }
+  form p span.wpcf7-not-valid-tip {
+    font-family: Merriweather;
+    text-transform: initial;
+    font-size: 8pt; }
 
 form .submit {
   background-color: #248A83;
@@ -1151,12 +1232,10 @@ form .submit:hover {
           box-shadow: none;
   background-color: #19625D; }
 
-form .form-error {
+form div.wpcf7-validation-errors {
+  border: 1px solid #f7e700;
   font-family: Merriweather;
-  font-size: 8pt;
-  border: 1px solid #f0e4d1;
-  padding: 5px;
-  display: none; }
+  font-size: 8pt; }
 
 .comment-form .comment-form-author, .comment-form .comment-form-email {
   display: inline-block;
@@ -1196,6 +1275,8 @@ form .form-error {
       background-color: #f4f4f4; }
     .error-container fieldset button, .search-container fieldset button {
       display: none; }
+    .error-container fieldset .search-toggle, .search-container fieldset .search-toggle {
+      display: none; }
   .error-container h2, .search-container h2 {
     text-align: left;
     font-size: 12pt;
@@ -1219,6 +1300,9 @@ form .form-error {
   .error-container #archives-dropdown--1, .search-container #archives-dropdown--1 {
     font-family: Merriweather;
     font-size: 8pt; }
+
+.error-page {
+  font-family: Merriweather; }
 
 .search-container h1 {
   border-bottom: 1px solid #e1e1e1;
@@ -1248,6 +1332,8 @@ form .form-error {
   background: url("../../images/dark-wood.png");
   color: #fff;
   display: block; }
+  .site-footer p {
+    color: #fff; }
   .site-footer .footer {
     display: -webkit-box;
     display: -ms-flexbox;

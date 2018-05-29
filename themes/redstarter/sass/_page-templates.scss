@@ -7,6 +7,7 @@ p{
 	font-family: Merriweather;
 	font-size: 8pt;
 	margin: 4px 0px 0px 0px;
+	color: $base-font;
 }
 h1{
 	text-align: center;
@@ -14,7 +15,7 @@ h1{
 	font-family: Novecento;
 	font-size: 30pt;
 	font-weight: 400;
-	color: #brand-purple;
+	color: $brand-purple;
 }
 h2{
 	text-align: center;
@@ -119,7 +120,7 @@ h2{
 					color: $brand-green;
 				}
 				a:hover {
-					color: #000;
+					color: $brand-purple;
 				}
 				button {
 					text-transform: uppercase;
@@ -158,7 +159,7 @@ h2{
 	list-style: none;
 	justify-content: center;
 	padding: 0 0 30px 0;
-	border-bottom: 1px dashed $border;
+	border-bottom: 1px dashed $dashed;
 	li {
 		a {
 			text-transform: uppercase;
@@ -182,25 +183,24 @@ h2{
 	.single-product-wrapper{
 		border: 1px solid $border;
 		.product-image-wrapper{
-			img {
-				height: 180px;
-				width: 100%;
-				background-size: cover;
-			}
+			height: 180px;
+			// width: 100%;
+			background-size: cover!important;
+    		background-position: center center!important;
+    		border-bottom: 3px solid $border;
 		}
 		.product-text-wrapper{
 			overflow-x: hidden;
-			.product-title:before {	
-		    float: left;
-		    width: 0;
-		    white-space: nowrap;	
-		    content:
-		 ". . . . . . . . . . . . . . . . . . . . "
-		 ". . . . . . . . . . . . . . . . . . . . "
-
-			}
-			padding: 0 10px 10px 10px;
+			padding: 5px 10px 10px 10px;
 			position: relative;
+			.product-title:before {	
+		    	float: left;
+			    width: 0;
+			    white-space: nowrap;	
+			    content:
+				 ". . . . . . . . . . . . . . . . . . . . "
+				 ". . . . . . . . . . . . . . . . . . . . "
+			}
 			span {
 				background-color: #fff;
 			}
@@ -392,6 +392,7 @@ h2{
 		}
 	}
 }
+
 //read more button also on search results page
 .read-more, .read-more:visited {
 	font-family: Novecento;
@@ -407,18 +408,78 @@ h2{
 	border: none;
 }
 
+//comments
+.comments-area {
+	font-family: Merriweather;
+	font-size: 8pt;
+	.comments-title {
+		text-align: left;
+	}
+	.comment-body, .children .comment {
+		display: flex;
+		margin: 10px 0;
+	}
+	.comment-list {
+		border-bottom: 1px solid $border;
+	}
+	ol, ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+	.children {
+		margin-left: 40px;
+		border-top: 1px solid $border;
+	}
+	.comment-author-avatar img {
+		height: 50px;
+		width: 50px;
+		border-radius: 25px;
+		margin-right: 20px;
+	}
+	cite.fn {
+		font-style: normal;
+		font-weight: bold;
+	}
+	p {
+		color: #000;
+		margin: 10px 0;
+	}
+	.comment-metadata a, a.comment-reply-link {
+		text-decoration: none;
+		color: $brand-green;
+	}
+	.comment-metadata a:hover, a.comment-reply-link:hover {
+		color: $brand-purple;
+	}
+	.comment-reply-title {
+		font-family: Novecento;
+		font-size: 16px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	.logged-in-as a {
+		text-decoration: none;
+		color: $brand-green;
+	}
+}
+
+
+
 //about-us
 .about-banner{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url("../../images/about-hero.jpg");
+	background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% );
 	height: 100vh;
 	width: 100vw;
 	border-bottom: 10px solid #fff;
 	background-size: cover;
-	color: #fff;
 	letter-spacing: 2px;
+	h1 {
+		color: #fff;
+	}
 }
 
 .about-us{
@@ -435,9 +496,17 @@ h2{
 //find-us
 .find-us-container{
 	#primary{
-			h2{
+		h1 {
+			text-align: left;
+			margin: 0;
+			font-size: 20pt;
+			font-weight: bold;
+		}
+		h2 {
 			text-align: left;
 			margin: 20px 0;
+			font-size: 16pt;
+			font-weight: bold;
 			.map {
 				height: 100px;
 			}
@@ -462,15 +531,20 @@ form {
 				color: $brand-orange;
 			}
 		}
-		input, textarea {
+		input[type="text"], input[type="email"], input[type="url"], textarea {
 			background-color: #f4f4f4;
 			font-family: Merriweather;
 			font-size: 8pt;
 			border-radius: 0;
+			margin-top: 5px;
 		}
-		.form-invalid {
-			color: #f00;
-			display: none;
+		textarea {
+			width: 519px;
+		}
+		span.wpcf7-not-valid-tip {
+			font-family: Merriweather;
+			text-transform: initial;
+			font-size: 8pt;
 		}
 	}
 	.submit{
@@ -488,12 +562,10 @@ form {
 		box-shadow: none;
 		background-color: #19625D;
 	}
-	.form-error{
+	div.wpcf7-validation-errors {
+		border: 1px solid #f7e700;
 		font-family: Merriweather;
 		font-size: 8pt;
-		border: 1px solid $brand-yellow;
-		padding: 5px;
-		display: none;
 	}
 }
 .comment-form { 
@@ -546,7 +618,9 @@ form {
 		button {
 			display: none;
 		}
-		
+		.search-toggle {
+			display: none;
+		}
 	}
 	h2{
 		text-align: left;
@@ -578,7 +652,10 @@ form {
 		font-size: 8pt;
 	}
 }
-
+//log out error
+.error-page {
+	font-family: Merriweather;
+}
 //search
 .search-container {
 	h1 {
@@ -613,6 +690,9 @@ form {
 	background: url("../../images/dark-wood.png");
 	color: #fff;
 	display: block;
+	p {
+		color: #fff;
+	}
 	.footer{
 		display: flex;
 		width: 800px;

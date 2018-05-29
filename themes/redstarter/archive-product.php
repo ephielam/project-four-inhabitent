@@ -38,8 +38,8 @@ get_header(); ?>
 				?>
 				<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
 				   <div class="single-product-wrapper">
-					   	<div class="product-image-wrapper">
-					   		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+					   	<div class="product-image-wrapper" style="background: url('<?php the_post_thumbnail_url(); ?>')">
+					   		<a href="<?php the_permalink(); ?>"></a>
 					   </div>
 					   <div class="product-text-wrapper">
 						   <p><span class="product-title"><?php the_title(); ?></span><span class="price"><?php echo CFS()->get('price'); ?></span></p>

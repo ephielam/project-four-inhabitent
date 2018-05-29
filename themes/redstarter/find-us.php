@@ -5,7 +5,8 @@ get_header(); ?>
 		<main id ="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-				<section class="find-us-main">
+				<?php echo the_content(); ?>
+	 			<!-- <section class="find-us-main">
 					<h2 class="find-us-title">Find Us</h2>
 					<iframe class ="map"
 					  width="600"
@@ -18,6 +19,8 @@ get_header(); ?>
 					<p>Inhabitent Camping Supply Co. knows what it takes to outfit a camping trip right. From flannel shirts to artisanal axes, we’ve got your covered. Please contact us below with any questions comments or suggestions.</p>
 				<section class="form">
 					<h2>Send Us Email!</h2>
+
+					
 					<form method="post" class="form-inner">
 						<p class="form-name">
 							<label for="name">Name<span class="required"> *</span></label>
@@ -44,7 +47,7 @@ get_header(); ?>
 						</p>
 						<div class="form-error" role="alert">One or more fields have an error. Please check and try again.
 						</div>
-					</form>
+					</form> -->
 
 
 			<?php endwhile; //End of the loop. ?>
